@@ -1,0 +1,206 @@
+@charset "UTF-8";
+/*topAndside*/
+.topAndside {
+  position: relative;
+  top: 0px;
+  height: 90px;
+  background: #686767;
+}
+
+.formBox {
+  /*side*/
+  /*Maun*/
+}
+.formBox .all {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  width: 50px;
+  height: 50px;
+  background: none;
+  outline: none;
+  border: none;
+  padding: 0;
+  z-index: 10;
+}
+.formBox .all span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  left: 13px;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.formBox .all span:nth-child(1) {
+  top: 14px;
+}
+.formBox .all span:nth-child(2) {
+  top: 24px;
+}
+.formBox .all span:nth-child(3) {
+  top: 34px;
+}
+.formBox .logo {
+  position: relative;
+  cursor: pointer;
+  top: 60px;
+  left: 80px;
+  width: 180px;
+}
+.formBox .Mainlogo {
+  position: relative;
+  cursor: pointer;
+  bottom: 80px;
+  left: 50px;
+  width: 190px;
+}
+.formBox .sideslide {
+  background-color: #f0f0f0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 90px;
+  left: 100%;
+  z-index: 11;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.formBox .sideslide.show {
+  left: 83%;
+}
+.formBox .sidesearch {
+  position: relative;
+  top: 100px;
+  left: 80px;
+}
+.formBox .back, .formBox .search {
+  position: relative;
+  left: 10px;
+  top: 10px;
+  color: white !important;
+}
+.formBox .table {
+  position: relative;
+  top: 100px;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+.formBox .profileImg {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  right: 40px;
+  top: 6px;
+  object-fit: contain;
+}
+.formBox .MemberTable {
+  position: relative;
+  left: 480px;
+  top: 200px;
+}
+.formBox .formBox .MemberDetailList {
+  font-size: 25px;
+}
+.formBox .formBox .MemberDetailList .MemberEmail {
+  position: relative;
+  left: 100px;
+}
+.formBox .formBox .MemberDetailList .MemberName {
+  position: relative;
+  right: 40px;
+}
+.formBox .formBox .MemberDetailList .MemberProfile {
+  position: relative;
+  right: 50px;
+}
+.formBox .formBox .MemberDetailList .MemberId {
+  position: relative;
+  left: 10px;
+}
+.formBox .formBox .MemberDetailList .MemberPhone {
+  position: relative;
+  left: 60px;
+}
+.formBox .formBox .MemberDetailList .MemberInterest {
+  position: relative;
+  right: 60px;
+}
+.formBox .formBox .MemberDetailList .MemberAge {
+  position: relative;
+  left: 100px;
+}
+.formBox .formBox .MemberDetailList .MemberDetail {
+  left: 202px;
+  font-size: 20px;
+}
+.formBox .formBox .MemberDetailList .MemberDetail .MemberDetaliId {
+  position: relative;
+  left: 30px;
+}
+.formBox .formBox .MemberDetailList .MemberDetail .MemberDetaliName {
+  position: relative;
+  right: 30px;
+}
+.formBox .formBox .MemberDetailList .MemberDetail .MemberDetaliEmail {
+  position: relative;
+  left: 60px;
+}
+.formBox .formBox .MemberDetailList .MemberDetail .MemberDetaliPhone {
+  position: relative;
+  right: 25px;
+}
+.formBox .formBox .MemberDetailList .MemberDetail .MemberDetaliInterest {
+  position: relative;
+  left: 50px;
+}
+.formBox .formBox .MemberDetailList .MemberDetail .MemberDetaliAge {
+  position: relative;
+  left: 110px;
+}
+
+.MemberSearch {
+  position: relative;
+  right: 7px;
+}
+
+.form-control {
+  display: block;
+  width: 10%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+/* 검색 */
+.MemberSearch h3 {
+  font-size: 24px;
+  position: relative;
+  top: -30px;
+  left: 40px;
+}
+
+/* footer */
+#footer {
+  color: black;
+  text-align: center;
+  font-size: 20px;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  background: #686767;
+}
+#footer p {
+  color: #b1a5c8;
+  line-height: 100px;
+  margin: 0;
+}

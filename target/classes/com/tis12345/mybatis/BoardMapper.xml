@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tis12345.mybatis.BoardMapper">
+	<!-- Member -->
+	
+	<select id="showAllMember" resultType="MemberBean">
+		SELECT * FROM MEMBER 
+		
+		<trim prefix="WHERE" prefixOverrides="AND|OR">
+			<if test="searchType=='memberName' and keyword != null and keyword != '' ">
+				NAME LIKE #{keyword}
+			</if>
+			<if test="searchType=='memberInterest' and keyword != null and keyword != '' ">
+				INTEREST LIKE #{keyword}
+			</if>
+			<if test="searchType=='memberAge' and keyword != null and keyword != '' ">
+				AGE LIKE #{keyword}
+			</if>	
+		</trim>	
+		ORDER BY NO DESC
+	</select>
+	
+	<select id="getSelectOneMember" resultType="MemberBean" parameterType="Integer">
+		SELECT * FROM MEMBER WHERE NO = #{no}
+	</select>
+	<select id="getPasswordMember" resultType="String" parameterType="Integer">
+		SELECT PASSWORD FROM MEMBER WHERE NO = #{no}
+	</select>
+	
+	<delete id="deleteMember" parameterType="Integer">
+		DELETE FROM MEMBER WHERE NO = #{no}
+	</delete>
+	
+	<update id="updateMember" parameterType="MemberBean">
+		UPDATE MEMBER SET NAME = #{name},
+		                    EMAIL = #{email},
+		                    PHONE = #{phone},
+		                    INTEREST = #{interest},
+		                    AGE = #{age} WHERE NO = #{no}
+	</update>
+	<insert id="insertMember" parameterType="MemberBean">
+		INSERT INTO MEMBER VALUES (MEMBER_SEQ.NEXTVAL,
+									#{id},
+									#{name},
+									#{password},
+									#{email},
+									#{phone},
+									#{interest},
+									${age},
+									#{profileImg}
+									)
+	</insert>
+	
+	<select id="idCheck" parameterType="String" resultType="Integer">
+		SELECT COUNT(*) AS COUNT FROM MEMBER WHERE ID = #{id}
+	</select>
+	
+	<select id="getLoginMember" parameterType="MemberBean" resultType="MemberBean">
+		SELECT * FROM MEMBER WHERE ID = #{id} AND PASSWORD = #{password}
+	</select>
+	
+	<!-- Movie -->
+	
+	<insert id="insertMovieList" parameterType="MovieBean">
+		INSERT INTO MOVIELIST VALUES (
+									MOVIE_SEQ.NEXTVAL,
+									#{title},
+									#{review},
+									#{choochoo},
+									#{contentsImg},
+									#{contentsRealImg},
+									#{director},
+									#{actor},
+									#{genre},
+									#{onoff},
+									#{runningtime},
+									#{movieVideo},
+									#{movieVideo2},
+									#{contentsofmovie})
+	</insert>
+	
+	<select id="showAllMovie" resultType="MovieBean">
+		SELECT * FROM MOVIELIST
+	</select>
+	
+	<select id="getSelectOneMovie" resultType="MovieBean" parameterType="Integer">
+		SELECT * FROM MOVIELIST WHERE NO = #{no}
+	</select>
+	
+	<update id="updateMovie" parameterType="MovieBean">
+		UPDATE MOVIELIST SET TITLE = #{title},
+		                    REVIEW = #{review},
+		                    CHOOCHOO = #{choochoo}, 
+		                    CONTENTSOFMOVIE = #{contentsofmovie}
+		                    WHERE NO = #{no}
+	</update>
+	
+	<delete id="deleteMovie" parameterType="Integer">
+		DELETE FROM MOVIELIST WHERE NO = #{no}
+	</delete>
+	
+	<!-- Music -->
+	
+		<insert id="insertMusicList" parameterType="MusicBean">
+		INSERT INTO MUSICLIST VALUES (
+									MUSIC_SEQ.NEXTVAL,
+									#{title},
+									#{titleSong},
+									#{artist},
+									#{review},
+									#{choochoo},
+									#{releaseDate},
+									#{genre},
+									#{agency},
+									#{musicVideo},
+									#{musicVideo2},
+									#{contentsImg},
+									#{contentsRealImg})
+	</insert>
+	
+	<select id="showAllMusic" resultType="MusicBean">
+		SELECT * FROM MUSICLIST
+	</select>
+	
+	<select id="getSelectOneMusic" resultType="MusicBean" parameterType="Integer">
+		SELECT * FROM MUSICLIST WHERE NO = #{no}
+	</select>
+	
+	<update id="updateMusic" parameterType="MusicBean">
+		UPDATE MUSICLIST SET TITLE = #{title},
+		                    REVIEW = #{review},
+		                    CHOOCHOO = #{choochoo} WHERE NO = #{no}
+	</update>
+	
+	<delete id="deleteMusic" parameterType="Integer">
+		DELETE FROM MUSICLIST WHERE NO = #{no}
+	</delete>
+	
+	<!-- book -->
+			
+	<insert id="insertBookList" parameterType="BookBean">
+		INSERT INTO BOOKLIST VALUES (
+									BOOK_SEQ.NEXTVAL,
+									#{title},
+									#{writer},
+									#{publisher},
+									#{genre},
+									#{contentsofbook, jdbcType=VARCHAR},
+									#{category},
+									#{contentsImg},
+									#{contentsRealImg},
+									#{review},
+									#{choochoo})
+	</insert>
+	
+	<select id="showAllBook" resultType="BookBean">
+		SELECT * FROM BOOKLIST 
+	</select>
+	
+	<select id="getSelectOneBook" resultType="BookBean" parameterType="Integer">
+		SELECT * FROM BOOKLIST WHERE NO = #{no}
+	</select>
+	<delete id="deleteBook" parameterType="Integer">
+		DELETE FROM BOOKLIST WHERE NO = #{no}
+	</delete>
+	
+	<update id="updateBook" parameterType="BookBean">
+		UPDATE BOOKLIST SET TITLE = #{title},
+		                    REVIEW = #{review},
+		                    CHOOCHOO = #{choochoo} WHERE NO = #{no}
+	</update>
+			
+			
+<!-- MovieReplyBean --> 
+	
+<!-- 	<select id="readMovieReply" resultType="MovieReplyBean"> -->
+<!--     	SELECT RNO, CONTENT, WRITER, REGDATE FROM MOVIE_REPLY WHERE BNO = #{bno} -->
+<!-- 	</select> -->
+	
+<!-- 	<insert id="insertMovieReply"> -->
+<!-- 		INSERT INTO MOVIE_REPLY(BNO,  -->
+<!-- 								RNO,  -->
+<!-- 								CONTENT,  -->
+<!-- 								WRITER)  -->
+<!-- 						VALUES( #{bno},  -->
+<!-- 						  	    MOVIE_REPLY_SEQ.NEXTVAL,  -->
+<!-- 						  	    #{content},  -->
+<!-- 						   	    #{writer}) -->
+<!-- 	</insert> -->
+	
+ 	<!-- 댓글 수정 --> 
+<!-- 	<update id="updateMovieReply" parameterType="MovieReplyBean"> -->
+<!-- 		UPDATE MOVIE_REPLY SET CONTENT = #{content} WHERE RNO = #{rno} -->
+<!-- 	</update> -->
+
+ 	<!-- 댓글 삭제 --> 
+<!-- 	<delete id="deleteMovieReply" parameterType="MovieReplyBean"> -->
+<!-- 		DELETE FROM MOVIE_REPLY -->
+<!-- 		WHERE RNO = #{rno} -->
+<!-- 	</delete> -->
+	
+	<!-- 선택된 댓글 조회 --> 
+<!-- 	<select id="getSelectOneMovieReply" resultType="MovieReplyBean"> -->
+<!-- 		SELECT -->
+<!-- 				BNO -->
+<!-- 			  , RNO -->
+<!-- 			  , CONTENT -->
+<!-- 			  , WRITER -->
+<!-- 			  , REGDATE -->
+<!-- 		  FROM MOVIE_REPLY -->
+<!-- 		 WHERE RNO = #{rno} -->
+<!-- 	</select> -->
+	
+	
+	<!-- MusicReplyBean --> 
+	
+<!-- 	<select id="readMusicReply" resultType="MusicReplyBean"> -->
+<!--     	SELECT RNO, CONTENT, WRITER, REGDATE FROM MUSIC_REPLY WHERE BNO = #{bno} -->
+<!-- 	</select> -->
+	
+<!-- 	<insert id="insertMusicReply"> -->
+<!-- 		INSERT INTO MUSIC_REPLY(BNO,  -->
+<!-- 								RNO,  -->
+<!-- 								CONTENT,  -->
+<!-- 								WRITER)  -->
+<!-- 						VALUES( #{bno},  -->
+<!-- 						  	    MUSIC_REPLY_SEQ.NEXTVAL,  -->
+<!-- 						  	    #{content},  -->
+<!-- 						   	    #{writer}) -->
+<!-- 	</insert> -->
+	
+	<!-- 댓글 수정 --> 
+<!-- 	<update id="updateMusicReply" parameterType="MusicReplyBean"> -->
+<!-- 		UPDATE MUSIC_REPLY SET CONTENT = #{content} WHERE RNO = #{rno} -->
+<!-- 	</update> -->
+
+ 	<!-- 댓글 삭제 --> 
+<!-- 	<delete id="deleteMusicReply" parameterType="MusicReplyBean"> -->
+<!-- 		DELETE FROM MUSIC_REPLY -->
+<!-- 		WHERE RNO = #{rno} -->
+<!-- 	</delete> -->
+	
+	<!-- 선택된 댓글 조회 --> 
+<!-- 	<select id="getSelectOneMusicReply" resultType="MusicReplyBean"> -->
+<!-- 		SELECT -->
+<!-- 				BNO -->
+<!-- 			  , RNO -->
+<!-- 			  , CONTENT -->
+<!-- 			  , WRITER -->
+<!-- 			  , REGDATE -->
+<!-- 		  FROM MUSIC_REPLY -->
+<!-- 		 WHERE RNO = #{rno} -->
+<!-- 	</select> -->
+	
+	
+ 	<!-- BookReplyBean --> 
+	
+<!-- 	<select id="readBookReply" resultType="BookReplyBean"> -->
+<!--     	SELECT RNO, CONTENT, WRITER, REGDATE FROM BOOK_REPLY WHERE BNO = #{bno} -->
+<!-- 	</select> -->
+	
+<!-- 	<insert id="insertBookReply"> -->
+<!-- 		INSERT INTO BOOK_REPLY(BNO,  -->
+<!-- 								RNO,  -->
+<!-- 								CONTENT,  -->
+<!-- 								WRITER)  -->
+<!-- 						VALUES( #{bno},  -->
+<!-- 						  	    BOOK_REPLY_SEQ.NEXTVAL,  -->
+<!-- 						  	    #{content},  -->
+<!-- 						   	    #{writer}) -->
+<!-- 	</insert> -->
+	
+	<!-- 댓글 수정 --> 
+<!-- 	<update id="updateBookReply" parameterType="BookReplyBean"> -->
+<!-- 		UPDATE BOOK_REPLY SET CONTENT = #{content} WHERE RNO = #{rno} -->
+<!-- 	</update> -->
+
+ 	<!-- 댓글 삭제 --> 
+<!-- 	<delete id="deleteBookReply" parameterType="BookReplyBean"> -->
+<!-- 		DELETE FROM BOOK_REPLY -->
+<!-- 		WHERE RNO = #{rno} -->
+<!-- 	</delete> -->
+	
+	<!-- 선택된 댓글 조회 --> 
+<!-- 	<select id="getSelectOneBookReply" resultType="BookReplyBean"> -->
+<!-- 		SELECT -->
+<!-- 				BNO -->
+<!-- 			  , RNO -->
+<!-- 			  , CONTENT -->
+<!-- 			  , WRITER -->
+<!-- 			  , REGDATE -->
+<!-- 		  FROM BOOK_REPLY -->
+<!-- 		 WHERE RNO = #{rno} -->
+<!-- 	</select> -->
+			
+</mapper>
+
+
+
+
+
+
+
+
+

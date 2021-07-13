@@ -1,0 +1,45 @@
+/*Common*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+.list {
+  position: relative;
+  display: flex;
+  left: 570px;
+  width: 40%;
+  height: 100%;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.list li {
+  width: 24%;
+  padding: 10px;
+}
+
+.list li img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.list li img:hover {
+  transform: scale(1.2);
+}
+
+.Container {
+  background: black;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h2 {
+  background: black;
+  color: white;
+}

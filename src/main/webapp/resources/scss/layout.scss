@@ -1,0 +1,661 @@
+/*Common*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style-type: none;
+	text-decoration:none;
+}
+
+.body {
+	background-color: black;
+}
+
+a {
+	text-decoration: none;
+	color: inherit  !important;
+}
+
+/*body*/
+.body {
+	background:black;
+}
+
+/*fotter*/
+#footer {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+/*IMG*/
+
+.IMG {
+	position:absolute;
+	background-size: 500px;
+	width:100%;
+	height:100%;
+	.swiper-slide{
+		position: relative;
+		li{
+			float: left;
+			//position: absolute;
+		}
+	}
+	
+    
+}
+
+/* 사진 정렬 및 이미지 나열 */
+.imgBox {
+	
+	max-width: 600px;
+	position: absolute;
+	top:250px;
+	left:290px;
+	&:after{
+		content: '';
+		display: block;
+		clear: both;
+	}
+ }
+ .musicList.imgBox {
+    max-width: 600px;
+    position: absolute;
+    top: 250px;
+    left: 1050px;
+}
+ 
+ 
+   /* clear fix */
+ .imgBox:after {
+	content: '';
+	display: inline-block;
+	clear: both;
+ }
+ 
+   /* ---- .grid-item ---- */
+ 
+ .grid-item {
+	//position: relative;
+	//float: left;
+	//background: #0D8;
+	//border: 2px solid #333;
+	//border-color: hsla(0, 0%, 0%, 0.7);
+	padding:4px;
+	
+	box-shadow:3px 3px 3px rgba(0,0,0,0.1);
+	img {
+	   width: 100px;
+	   height: 150px;
+	   object-fit: cover;
+	}
+ }
+
+.background,.background1,.background2 {
+	position: relative;
+    width: 95%;
+    height: 70%;
+    left: 42px;
+    top: 84px;
+    border-radius: 32px;
+	
+}
+
+
+/*MenuBar*/
+
+.HeaderMenuBar {
+	display: flex;
+    position: relative;
+    bottom: 960px;;
+    width: 100%;
+    color: rgba(186, 143, 225, 0.8);
+}
+
+.MenuBar {
+	
+	position:relative;
+	cursor:pointer;
+	left: 150px;
+	z-index: 999;
+}
+
+.TIS {
+	
+}
+
+
+.MoMenu,.MuMenu,.BoMenu {
+	padding:30px 0 0 100px;
+	position:relative;
+	bottom:13px;
+	cursor:pointer;
+	font-size: 20px;
+}
+
+.loginMenu,.joinMenu {
+	cursor: pointer;
+    position: relative;
+    /* top: 20px; */
+    bottom: 2px;
+    left: 950px;
+    font-size: 20px;
+}
+
+.NologinMenu {
+	cursor: pointer;
+    position: relative;
+    /* top: 20px; */
+    bottom: 2px;
+    left: 950px;
+    font-size: 20px;
+}
+.NojoinMenu {
+	cursor: pointer;
+    position: relative;
+    bottom: 2px;
+    left: 1000px;
+    font-size: 20px;
+}
+
+
+.loginMenu1,.joinMenu1 {
+	cursor: pointer;
+    position: relative;
+    top: 17px;
+    left: 800px;
+    font-size: 20px;
+}
+.joinMenu2 {
+	cursor: pointer;
+    position: relative;
+    top: 17px;
+    left: 812px;
+    font-size: 20px;
+}
+.joinMenu3 {
+	cursor: pointer;
+    position: relative;
+    top: 17px;
+    left: 860px;
+    font-size: 20px;
+}
+
+.NotAdminloginMenu {
+	cursor: pointer;
+    position: relative;
+    top: 17px;
+    left: 830px;
+    font-size: 20px;
+}
+
+.NotAdminjoinMenu {
+	cursor: pointer;
+    position: relative;
+    top: 17px;
+    left: 860px;
+    font-size: 20px;
+}
+
+.depth02 {
+	position: relative;
+    top: 20px;
+    right: 30px;
+	display: none;
+	
+}
+
+.joinMenu {
+	left:1030px;
+}
+
+.logo {
+	position: relative;
+	bottom: 17px;
+    right: 31px;
+    width: 180px;
+}
+
+.menu-fixed {
+	position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    background: #f5f6f7;
+    height: 75px;
+	.TISFLIX2,.MenuBar {
+		position: relative;
+		left: 150px;
+	}
+	.loginMenu,.joinMenu {
+		position: relative;
+		left: 800px;
+	}
+	.loginMenu1,.joinMenu1 {
+		position: relative;
+		left: 800px;
+	}
+	.joinMenu2 {
+		cursor: pointer;
+		position: relative;
+		top: 17px;
+		left: 830px;
+		font-size: 20px;
+	}
+	.joinMenu3 {
+		cursor: pointer;
+		position: relative;
+		top: 17px;
+		left: 860px;
+		font-size: 20px;
+	}
+	.NologinMenu {
+		cursor: pointer;
+		position: relative;
+		bottom: 2px;
+		left: 950px;
+		font-size: 20px;
+	}
+	.NojoinMenu {
+		cursor: pointer;
+		position: relative;
+		bottom: 2px;
+		left: 1000px;
+		font-size: 20px;
+	}
+	
+	.NotAdminloginMenu {
+		cursor: pointer;
+		position: relative;
+		top: 17px;
+		left: 830px;
+		font-size: 20px;
+	}
+	
+	.NotAdminjoinMenu {
+		cursor: pointer;
+		position: relative;
+		top: 17px;
+		left: 860px;
+		font-size: 20px;
+	}
+}
+
+/*Moive Music Book Title*/
+
+.contentsList{
+	position:relative;
+	bottom: 200px;
+	background-color: black;
+}
+
+
+.MusiclistSlide {
+	position: relative;
+	bottom: 275px !important;
+}
+.BooklistSlide {
+	position: relative;
+	bottom: 744px;
+}
+
+.list {
+	background-color: black;
+	position: relative;
+	top: 200px;
+	text-align: center;
+	h2 {
+		color:white;
+	}
+	.MusicList {
+		position: relative;
+		bottom: 320px;
+		color: white;
+	}
+	.swiper-container.MusiclistSlide.swiper-container-initialized.swiper-container-horizontal.swiper-container-pointer-events {
+		position: relative;
+		bottom: 680px;
+	}
+	
+	.Booklist {
+		position: relative;
+		bottom: 560px;
+		color: white;
+	}
+	
+	.swiper-container.BooklistSlide.swiper-container-initialized.swiper-container-horizontal.swiper-container-pointer-events {
+		position: relative;
+		bottom: 530px;
+	}
+	
+	
+	.poster {
+	    position: relative;
+		top: 50px;
+		width: 100%;
+		right: 60px;
+		height: 59.5%;
+	}
+	.album {
+		position: relative;
+		top: 50px;
+		width: 100%;
+		left: 66px;
+		height: 39.5%;
+	}
+	.MovieName {
+		position: relative;
+    font-size: 20px;
+    color: white;
+	right: 60px;
+    top: 50px;
+	}
+	.MusicName {
+		position: relative;
+    font-size: 20px;
+    color: white;
+	left: 65px;
+    top: 50px;
+	}
+	.BookName {
+		position: relative;
+    font-size: 20px;
+    color: white;
+	right: 5px;
+    top: 50px;
+	}
+	.bookImg {
+		position: relative;
+		top: 50px;
+		width: 100%;
+		left: 0px;
+		height: 49.5%;
+	}
+	.contentsBox {
+		
+		position: relative;
+		height: 100%;
+		left: 42px;
+	}
+	.MusiccontentsBox {
+		
+		position: relative;
+		height: 100%;
+		right: 64px;
+	}
+	.BookcontentsBox {
+		
+		position: relative;
+		height: 100%;
+		right: 0px;
+	}
+
+	/*NextButton*/
+
+	.NextButton {
+		position: absolute;
+		top: 29.3%;
+		right: 0px;
+		height: 40.4%;
+		width: 57px;
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%);
+		z-index: 2;
+		background: none;
+		border: none;
+		outline: none;
+		padding: 0;
+		cursor: pointer;
+		background: rgba(20,20,20,.5);
+	}
+	
+	}
+	.PrevButton {
+		
+		position: absolute;
+		top: 29.3%;
+		left: 0px;
+		height: 40.4%;
+		width: 57px;
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%);
+		z-index: 2;
+		background: none;
+		border: none;
+		outline: none;
+		padding: 0;
+		cursor: pointer;
+		background: rgba(20,20,20,.5);
+	}
+	
+	.PrevBtn, .NextBtn {
+		position: relative;
+		top: 0px;
+	}
+
+		
+
+	.MusicNextButton {
+		position: absolute;
+		bottom: 78.2%;
+		right: 0px;
+		height: 26.5%;
+		width: 57px;
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%);
+		z-index: 2;
+		background: none;
+		border: none;
+		outline: none;
+		padding: 0;
+		cursor: pointer;
+		background: rgba(20,20,20,.5);
+		}
+		.MusicPrevButton {
+		position: absolute;
+		bottom: 78.2%;
+		left: 0px;
+		height: 26.5%;
+		width: 57px;
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%);
+		z-index: 2;
+		background: none;
+		border: none;
+		outline: none;
+		padding: 0;
+		cursor: pointer;
+		background: rgba(20,20,20,.5);
+			}
+
+		.BookNextButton {
+			position: absolute;
+			bottom: 93%;
+			right: 0px;
+			height: 33.5%;
+			width: 57px;
+			-webkit-transform: translateY(-50%);
+			transform: translateY(-50%);
+			z-index: 2;
+			background: none;
+			border: none;
+			outline: none;
+			padding: 0;
+			cursor: pointer;
+			background: rgba(20,20,20,.5);
+		}
+		.BookPrevButton {
+			position: absolute;
+		bottom: 93%;
+		left: 0px;
+		height: 33.5%;
+		width: 57px;
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%);
+		z-index: 2;
+		background: none;
+		border: none;
+		outline: none;
+		padding: 0;
+		cursor: pointer;
+		background: rgba(20,20,20,.5);
+			}
+		
+
+
+/*swiper*/
+
+.swiper-container {
+	overflow: visible;
+    width: 100%;
+    height: 969px;
+}
+
+.movieslide {
+	width: 243.333px !important;
+    margin-right: 31px;
+    flex-shrink: 0 !important;
+    height: 70% !important;
+    position: relative !important;
+    transition-property: transform !important;
+	
+}
+.musicslide {
+	width: 243.333px !important;
+    margin-right: 31px;
+    -ms-flex-negative: 0 !important;
+    flex-shrink: 0 !important;
+    height: 70% !important;
+    position: relative !important;
+    
+}
+.bookslide {
+	width: 243.333px !important;
+    margin-right: 31px;
+    -ms-flex-negative: 0 !important;
+    flex-shrink: 0 !important;
+    height: 70% !important;
+    position: relative !important;
+    
+    
+}
+
+.listSlide {
+	
+	width: 100%;
+    height: 969px;
+}
+
+/*typing.js*/
+.movietypingContents {
+	font-size:20px;
+	font-weight:700;
+	text-align:center;
+	color:white;
+}
+
+/*Side*/
+.mainuparrow {
+    display:none;
+	position:fixed;
+	bottom:30px;
+	right:30px;
+	z-index:999;
+	border:1px solid #ccc;
+	outline:none;
+	background-color:white;
+	color:#333;
+	cursor:pointer;
+	padding:15px 20px;
+	border-radius:100%;
+    transition: all 0.5s ease;
+}
+
+
+.fixed {
+    display: block;
+}
+
+
+
+/*hover*/
+
+
+.MoMenu:hover{
+	color:red;
+}
+.MuMenu:hover{
+	color:red;
+}
+.BoMenu:hover{
+	color:red;
+}
+.DetailLogin:hover{
+	color:red !important;
+	text-decoration: none;
+}
+.DetailJoin:hover {
+	color: red !important;
+	text-decoration: none;
+}
+.depth01:hover{
+	color:red;
+	text-decoration: none;
+	
+}
+.depth01:hover .depth02{
+    opacity: 1;
+    display: block;
+    
+}
+.member:hover,.memberlogout:hover {
+	text-decoration: none;
+}
+
+.PrevButton:hover {
+	background: rgba(255, 255, 255, 0.6);
+}
+.NextButton:hover {
+	background: rgba(255, 255, 255, 0.6);
+}
+.MusicPrevButton:hover {
+	background: rgba(255, 255, 255, 0.6);
+}
+.MusicNextButton:hover {
+	background: rgba(255, 255, 255, 0.6);
+}
+.BookPrevButton:hover {
+	background: rgba(255, 255, 255, 0.6);
+}
+.BookNextButton:hover {
+	background: rgba(255, 255, 255, 0.6);
+}
+
+
+/*DropMenu*/
+
+.gnblist  {
+	position: relative;
+	left: -36px;
+}
+
+.gnblist .first {
+	height: 100px;
+}
+
+
+
+.gnblist .first:hover ul.depth02 {
+	position: absolute;
+	line-height: 40px;
+	width: 200px;
+	top: 50px;
+	left: -25px;
+	display: block;
+	
+}
+
+
+
+

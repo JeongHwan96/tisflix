@@ -1,0 +1,21 @@
+.loginbody { background: #f5f6f7; }
+
+.formBox h2 { width: 270px; position: relative; top: 200px; }
+
+.formBox h2 img { left: 782px; }
+
+.formBox h2 .Loginlogo { position: relative; cursor: pointer; width: 340px; }
+
+.formBox .LoginForm td { position: relative; height: 29px; margin-bottom: 8px; padding: 1px 1px 1px 1px; background: #fff; }
+
+.formBox .LoginForm td input:focus { outline: 2px solid #ba8fe1; }
+
+.formBox table { position: relative; top: 250px; left: 800px; }
+
+.btns #join { background: #ba8fe1; font-weight: 700; border: solid 1px #dadada; position: relative; width: 31.4%; height: 50px; top: 259px; left: 800.6px; }
+
+.btns .Regi { background: #ba8fe1; cursor: pointer; font-weight: 700; border: solid 1px #dadada; position: relative; width: 31.2%; height: 50px; top: 270px; left: 801px; text-align: center; padding: 15px; }
+
+form#joinForm { width: 50%; }
+
+#footer { color: black; text-align: center; font-size: 20px; bottom: 0; position: absolute; width: 100%; background: #686767; }

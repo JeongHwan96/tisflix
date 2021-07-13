@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tis12345.mybatis.ReplyMapper">
+   <!-- MovieReplyBean -->
+  
+   <select id="movieGetTotal" resultType="Integer">
+      SELECT COUNT(*) AS TOTAL FROM MOVIE_REPLY WHERE BNO = #{bno}
+   </select>
+   <select id="movieGetMaxRef" resultType="Integer">
+      SELECT MAX(REF) FROM MOVIE_REPLY
+   </select>
+  
+  
+   <select id="getAllMovieReplyList" parameterType="hashMap" resultType="MovieReplyBean">
+      SELECT * FROM (
+      SELECT B.* , ROWNUM AS NUM FROM (SELECT * FROM MOVIE_REPLY WHERE BNO = #{bno} ORDER BY RNO DESC) B)
+      WHERE NUM <![CDATA[>=]]> #{start} AND NUM <![CDATA[<=]]> #{end}
+   </select>
+  
+  
+   <select id="readMovieReply" resultType="MovieReplyBean">
+       SELECT RNO, CONTENT, WRITER, REGDATE FROM MOVIE_REPLY WHERE BNO = #{bno}
+   </select>
+  
+   <insert id="insertMovieReply">
+      INSERT INTO MOVIE_REPLY(BNO,
+                        RNO,
+                        CONTENT,
+                        WRITER,
+                        REGDATE,
+                        PROFILEIMG)
+                  VALUES( #{bno},
+                           MOVIE_REPLY_SEQ.NEXTVAL,
+                           #{content},
+                            #{writer},
+                            SYSDATE,
+                            #{profileImg})
+   </insert>
+  
+   <!-- 댓글 수정 -->
+   <update id="updateMovieReply" parameterType="MovieReplyBean">
+      UPDATE MOVIE_REPLY SET CONTENT = #{content} WHERE RNO = #{rno}
+   </update>
+
+   <!-- 댓글 삭제 -->
+   <delete id="deleteMovieReply" parameterType="MovieReplyBean">
+      DELETE FROM MOVIE_REPLY
+      WHERE RNO = #{rno}
+   </delete>
+   
+   <!-- 댓글 전체 삭제 -->
+   <delete id="deleteAllMovieReply" parameterType="MovieReplyBean">
+      DELETE FROM MOVIE_REPLY
+      WHERE BNO = #{bno}
+   </delete>
+  
+   <!-- 선택된 댓글 조회 -->
+   <select id="getSelectOneMovieReply" resultType="MovieReplyBean">
+      SELECT
+            BNO
+           , RNO
+           , CONTENT
+           , WRITER
+           , REGDATE
+           , PROFILEIMG
+        FROM MOVIE_REPLY
+       WHERE RNO = #{rno}
+   </select>
+  
+  
+   <!-- MusicReplyBean -->
+  
+   <select id="musicGetTotal" resultType="Integer">
+      SELECT COUNT(*) AS TOTAL FROM MUSIC_REPLY WHERE BNO = #{bno}
+   </select>
+   <select id="musicGetMaxRef" resultType="Integer">
+      SELECT MAX(REF) FROM MUSIC_REPLY
+   </select>
+  
+  
+   <select id="getAllMusicReplyList" parameterType="hashMap" resultType="MusicReplyBean">
+      SELECT * FROM (
+      SELECT B.* , ROWNUM AS NUM FROM (SELECT * FROM MUSIC_REPLY WHERE BNO = #{bno} ORDER BY RNO DESC) B)
+      WHERE NUM <![CDATA[>=]]> #{start} AND NUM <![CDATA[<=]]> #{end}
+   </select>
+  
+   <select id="readMusicReply" resultType="MusicReplyBean">
+       SELECT RNO, CONTENT, WRITER, REGDATE FROM MUSIC_REPLY WHERE BNO = #{bno} 
+   </select>
+  
+   <insert id="insertMusicReply">
+      INSERT INTO MUSIC_REPLY(BNO,
+                        RNO,
+                        CONTENT,
+                        WRITER,
+                        REGDATE,
+                        PROFILEIMG)
+                  VALUES( #{bno},
+                           MUSIC_REPLY_SEQ.NEXTVAL,
+                           #{content},
+                            #{writer},
+                            SYSDATE,
+                            #{profileImg})
+   </insert>
+  
+   <!-- 댓글 수정 -->
+   <update id="updateMusicReply" parameterType="MusicReplyBean">
+      UPDATE MUSIC_REPLY SET CONTENT = #{content} WHERE RNO = #{rno}
+   </update>
+
+   <!-- 댓글 삭제 -->
+   <delete id="deleteMusicReply" parameterType="MusicReplyBean">
+      DELETE FROM MUSIC_REPLY
+      WHERE RNO = #{rno}
+   </delete>
+   
+      <!-- 댓글 전체 삭제 -->
+   <delete id="deleteAllMusicReply" parameterType="MovieReplyBean">
+      DELETE FROM MUSIC_REPLY
+      WHERE BNO = #{bno}
+   </delete>
+  
+   <!-- 선택된 댓글 조회 -->
+   <select id="getSelectOneMusicReply" resultType="MusicReplyBean">
+      SELECT
+            BNO
+           , RNO
+           , CONTENT
+           , WRITER
+           , REGDATE
+           , PROFILEIMG
+        FROM MUSIC_REPLY
+       WHERE RNO = #{rno}
+   </select>
+  
+  
+   <!-- BookReplyBean -->
+  
+  
+   <select id="bookGetTotal" resultType="Integer">
+      SELECT COUNT(*) AS TOTAL FROM BOOK_REPLY WHERE BNO = #{bno}
+   </select>
+   <select id="bookGetMaxRef" resultType="Integer">
+      SELECT MAX(REF) FROM BOOK_REPLY
+   </select>
+  
+  
+   <select id="getAllBookReplyList" parameterType="hashMap" resultType="BookReplyBean">
+      SELECT * FROM (
+      SELECT B.* , ROWNUM AS NUM FROM (SELECT * FROM BOOK_REPLY WHERE BNO = #{bno} ORDER BY RNO DESC) B)
+      WHERE NUM <![CDATA[>=]]> #{start} AND NUM <![CDATA[<=]]> #{end}
+   </select>
+  
+  
+  
+   <select id="readBookReply" resultType="BookReplyBean">
+       SELECT RNO, CONTENT, WRITER, REGDATE FROM BOOK_REPLY WHERE BNO = #{bno}
+   </select>
+  
+   <insert id="insertBookReply">
+      INSERT INTO BOOK_REPLY(BNO,
+                        RNO,
+                        CONTENT,
+                        WRITER,
+                        REGDATE,
+                        PROFILEIMG)
+                  VALUES( #{bno},
+                           BOOK_REPLY_SEQ.NEXTVAL,
+                           #{content},
+                            #{writer},
+                            SYSDATE,
+                            #{profileImg})
+   </insert>
+  
+   <!-- 댓글 수정 -->
+   <update id="updateBookReply" parameterType="BookReplyBean">
+      UPDATE BOOK_REPLY SET CONTENT = #{content} WHERE RNO = #{rno}
+   </update>
+
+   <!-- 댓글 삭제 -->
+   <delete id="deleteBookReply" parameterType="BookReplyBean">
+      DELETE FROM BOOK_REPLY
+      WHERE RNO = #{rno}
+   </delete>
+   
+   <!-- 댓글 전체 삭제 -->
+   <delete id="deleteAllBookReply" parameterType="MovieReplyBean">
+      DELETE FROM BOOK_REPLY
+      WHERE BNO = #{bno}
+   </delete>
+  
+   <!-- 선택된 댓글 조회 -->
+   <select id="getSelectOneBookReply" resultType="BookReplyBean">
+      SELECT
+            BNO
+           , RNO
+           , CONTENT
+           , WRITER
+           , REGDATE
+           , PROFILEIMG
+        FROM BOOK_REPLY
+       WHERE RNO = #{rno}
+   </select>
+        
+</mapper>

@@ -1,0 +1,98 @@
+.topmenu {
+  background: #686767;
+}
+.topmenu .logo {
+  width: 10%;
+  position: relative;
+  left: 90px;
+  top: 12px;
+}
+
+.formBox h2 {
+  position: relative;
+  left: 696px;
+  top: 62px;
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 32px;
+  height: 32px;
+  border-right: 1px solid black;
+  animation: cursor 0.5s ease infinite;
+  z-index: 1;
+}
+
+/*backimg*/
+.backimg img {
+  position: relative;
+  width: 35%;
+  bottom: 30px;
+  left: 580px;
+}
+
+tbody {
+  position: relative;
+  line-height: 30px;
+  left: 700px;
+  top: 100px;
+}
+tbody td, tbody th {
+  padding: 10px 0;
+}
+tbody textarea, tbody input {
+  height: 30px;
+  padding-bottom: 10px;
+  border: solid 1px #dadada;
+}
+tbody textarea:focus, tbody input:focus {
+  outline: 2px solid #ba8fe1;
+}
+tbody #file {
+  border: 0;
+}
+tbody #review {
+  height: 110px;
+  padding-top: 10px;
+  width: 30%;
+}
+
+.btns {
+  position: relative;
+  display: flex;
+  width: 300px;
+  left: 1521px;
+  bottom: 950px;
+  color: antiquewhite;
+}
+.btns #join, .btns #cancel {
+  position: relative;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 20px;
+  border: 1px solid #686767;
+  background: #686767;
+}
+.btns #cancel {
+  left: 20px;
+}
+
+#footer {
+  color: black;
+  text-align: center;
+  font-size: 20px;
+  top: 1140px;
+  position: absolute;
+  height: 100px;
+  background: #686767;
+  width: 100%;
+}
+#footer p {
+  color: #b1a5c8;
+  line-height: 100px;
+  margin: 0;
+}
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}

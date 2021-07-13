@@ -1,0 +1,549 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style-type: none;
+}
+
+
+.contents {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.Detail {
+    background-color:black;
+}
+
+.topmenu {
+    background: rgb(104, 103, 103);
+    .logo {
+        width: 10%;
+        position: relative;
+        left: 90px;
+        top: 22px;
+        cursor: pointer;
+    }
+}
+
+.formBox {
+     
+    height: 710px;
+    width: 94%;
+    position: relative;
+    top: 130px;
+    .ImgPart {
+        // border-radius: 5px;
+        // min-width: 30%;
+        // margin-right: 20px;
+        // background-position: center center;
+        // background-size: cover;
+        // height: 100%;
+        // z-index: 0;
+    }
+    h2 {
+    
+        position:relative;
+        top: 100px;
+    }
+    .img {
+        position: relative;
+        top: 0px;
+        left: 100px;
+        width: 29px;
+        height: 710px;
+    img {
+        width: 450px;
+        height: 780px;
+
+    }
+    }
+    
+    .explanation {
+        width: 25%;
+        position: relative;
+        text-align: center;
+        bottom: 730px;
+        left: 530px;
+    .movieTitle {
+        text-align: left;
+        left: 50px;
+        position: relative;
+        color: white;
+        }
+    }
+    .explanation2 {
+        width: 12%;
+        font-size: 13px;
+        position: relative;
+        text-align: left;
+        bottom: 730px;
+        left: 582px;
+        .Genre,.status,.RunningTime,.slush {
+        position: relative;
+        color: white;
+        }
+    }
+    .explanation3 {
+        width: 60%;
+        height: 20%;
+        font-size: 13px;
+        position: relative;
+        text-align: center;
+        bottom: 746px;
+        left: 552px;
+    .Director,.DirectorList {
+        position: relative;
+        color: white;
+        }
+    .Director {
+        text-align: left;
+        left: 29px;
+        top: 40px;
+        font-size: 22px;
+        }
+    .DirectorList {
+        font-size: 20px;
+        height: 30%;
+        top: 48px;
+        left: 28px;
+        text-align: left;
+        }   
+    }
+
+    .explanation4 {
+        width: 60%;
+        height: 20%;
+        font-size: 13px;
+        position: relative;
+        text-align: center;
+        bottom: 789px;
+        left: 552px;
+        .Actor,.ActorList {
+            position: relative;
+            color: white;
+            }
+
+        .Actor {
+            text-align: left;
+            left: 29px;
+            top: 39px;
+            font-size: 22px;
+        }
+        .ActorList {
+            font-size: 20px;
+            height: 30%;
+            top: 48px;
+            left: 27px;
+            text-align: left;
+        }
+    }
+
+    .explanation5 {
+        width: 60%;
+        height: 20%;
+        font-size: 13px;
+        position: relative;
+        text-align: center;
+        bottom: 831px;
+        left: 579px;
+    }
+        .Review,.Review2 {
+            position: relative;
+            color: white;
+            }
+        .Review {
+            text-align: left;
+            width: 50%;
+            right: 5px;
+            top: 39px;
+            font-size: 22px;
+        }
+        .Review2 {
+            text-align: left;
+            font-size: 20px;
+            width: 50%;
+            height: 30%;
+            top: 48px;
+            right: 6px;
+        }
+        }
+
+    .explanation6 {
+        width: 60%;
+        height: 20%;
+        font-size: 13px;
+        position: relative;
+        text-align: center;
+        bottom: 866px;
+        left: 552px;
+        .Recommendation,.Recommendation2 {
+            position: relative;
+            color: white;
+            }
+        .Recommendation {
+            text-align: left;
+            left: 22px;
+            top: 31px;
+            font-size: 22px;
+        }
+        .Recommendation2 {
+            width: 50%;
+            text-align: left;
+            font-size: 20px;
+            height: 30%;
+            top: 40px;
+            left: 25px;
+        }
+        }
+
+        .explanation7 {
+            width: 60%;
+        height: 20%;
+        font-size: 13px;
+        position: relative;
+        text-align: center;
+        bottom: 616px;
+        left: 552px;
+        .Preview,.PreviewVideo {
+            position: relative;
+            color: white;
+            }
+        .Preview {
+            text-align: left;
+            left: 22px;
+            bottom: 269px;
+            font-size: 22px;
+        }
+        .PreviewVideo {
+            position: relative; 
+            width: 46%;
+            text-align: left;
+            font-size: 20px;
+            height: 170%;
+            top: -257px;
+            right: 20px;
+        }
+        .PreviewVideo2 {
+            position: relative; 
+            width: 46%;
+            text-align: left;
+            font-size: 20px;
+            height: 170%;
+            top: -257px;
+            right: 20px;
+        }
+        }
+
+        .explanation8 {
+            width: 60%;
+            height: 20%;
+            font-size: 13px;
+            position: relative;
+            text-align: center;
+            bottom: 716px;
+            left: 79px;
+            .contentsofmovie,.contentsofmovie2 {
+                position: relative;
+                color: white;
+                }
+            .contentsofmovie {            
+                position: relative;
+                top: 30px;
+                left: 298px;
+                font-size: 22px;
+            }
+            .contentsofmovie2 {
+                position: relative;
+                top: 43px;
+                line-height: 30px;
+                text-align: center;
+                word-wrap: break-word;
+                white-space: pre;
+                width: 163%;
+                font-size: 15px;
+                overflow: hidden;
+                height: 90px;
+                transition: all 0.25s ease;
+                &.show {
+                    height: 195px;
+                }
+            }
+            }
+
+            .hidden2 {
+                width: 50px;
+                position: relative;
+                left: 810px;
+                top: 70px;
+                color: #6699cc;
+                cursor: pointer;
+            .close2 {
+                position: relative;
+                display: none;
+                bottom: 0px;
+            }
+}
+            
+          
+            
+            .show {
+                display: block !important;
+            }
+            
+            .hide{
+                display: none ;
+            }
+            
+            
+     
+
+    
+    // .MovieDirector,.Actor,.Genre,.review,.recommendation,.kind {
+    //     position: relative;
+    //     bottom: 270px;
+    //     font-size: 21px;
+    //     left: 730px;
+    //     line-height: 50px;
+    //     .ex {
+    //         position:relative;
+    //         right: 20px;
+    //     }
+    // }
+    // .status,.RunningTime {
+    //     position: relative;
+    //     bottom: 270px;
+    //     font-size: 21px;
+    //     left: 725px;
+    //     line-height: 50px;
+    //     .Running {
+    //         position: relative;
+    //         right: 16px;
+    //     }
+        
+    // }
+
+    // .MovieDirector,.Actor,.Genre {
+    //     left: 710px;
+    // }
+
+    pre {
+        margin: 0 0 0 0;
+    }
+
+    .preview {
+        position: relative;
+    text-align: center;
+    bottom: 133px;
+    width: 40%;
+    left: 669px;
+        .text {
+            position: relative;
+            left: 200px;
+        }
+        
+    }
+    .PreviewVideo{
+        position: relative;
+        top: 264px;
+        right: 310px;
+    }
+ 
+    .btns {
+        position: relative;
+        display: flex;
+        width: 500px;
+        left: 1390px;
+        bottom: 50px;
+        color: antiquewhite;
+}
+        .Modify,.Delete,.Cancel {
+            position: relative;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 20px;
+            left: 100px;
+        }
+        .Modify{
+            left: 100px;
+        }
+        .Delete {
+            left:150px;
+        }
+        .Cancel {
+            left: 200px;
+        }
+
+
+
+/*underline*/
+.underline {
+    position: relative;
+    bottom: 715px;
+    left: 102px;
+    width: 90%;
+    height: 2px;
+    background: white;
+    margin-top: 30px;
+}   
+.underline2 {
+    position: relative;
+    top: 399px;
+    left: 96px;
+    width: 85%;
+    height: 2px;
+    background: white;
+    margin-top: 30px;
+}
+.underline3 {
+    position: relative;
+    left: 22px;
+    top: 58px;
+    width: 150.2%;
+    height: 2px;
+    background: white;
+    margin-top: 30px;
+}
+
+/*댓글*/
+#Toggle {
+    position: relative;
+    z-index: 10;
+    top: 200px;
+    left: 751px;
+    button {
+        width: auto;
+        -webkit-appearance: none;
+        outline: none;
+        display: inline-block;
+        margin: 12px 0;
+        padding: 16px 48px;
+        font-weight: bold;
+        font-size: 18px;
+        text-transform: uppercase;
+        text-decoration: none;
+        text-align: center;
+        background-color: #d6dfe0;
+        border: 6px solid #9cb3b4;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-transition: 0.1s;
+        transition: 0.1s;
+        border-radius: 12px;
+        position: relative;
+        bottom: 80px;
+        /* right: 0; */
+        /* bottom: 0; */
+        left: 600px;
+        width: 90px;
+        height: 60px;
+        margin: auto;
+    }
+   
+    
+}
+
+#slideTogglebox {
+    width: 1614px !important;
+    height: 200px !important;
+    position: relative !important; 
+    top: 130px !important;
+    left: 20px !important;
+    background-color: beige !important;
+}
+
+/*hover*/
+.Modify:hover,.Delete:hover,.Cancel:hover {
+    color: rgba(186, 143, 225, 0.8);
+
+}
+
+/* 댓글 입력 */
+.replyWrite {
+    width: 90%;
+    height: 150px;
+    margin: 20px auto;
+    position: relative;
+    top: 100%;
+    display: flex;
+    .sub1 {
+        float: left;
+        width: 5%;
+    }
+    .sub2 {
+        float: left;
+        width: 73%;
+    }
+    .replyWriteBtn {
+        float: left;
+        width: 12%;
+        margin-left: 115px;
+    }
+}
+
+
+
+/* 댓글 */
+li {
+    width: 100%;
+    .reply {
+        width: 90%;
+        height: 40px;
+        margin: 10px auto;
+        .replytest {
+            position: relative;
+            top: 4px;
+            left: 20px;
+        }
+        .profileImg {
+            width: 25px;
+            height: 25px;
+            object-fit: cover;
+            float: left;
+        }
+        .numbering {
+            float: left;
+            width: 5%;
+        }
+        .content {
+            float: left;
+            width: 55%;
+        }
+        .writer {
+            float: left;
+            width: 10%;
+        }
+        .regDate {
+            float: left;
+            width: 11%;
+        }
+        .replyUpdateBtn {
+            float: right;
+            width: 5%;
+        }
+        .replyDeleteBtn {
+            float: right;
+            margin: 0 25px;
+            width: 5%;
+        }
+    }
+}
+
+
+
+/* 페이지네이션 */
+
+.pagination {
+    position: relative;
+    display: flex;
+    padding-left: 0;
+    margin: 0 auto;
+    border-radius: 4px;
+    width: 10%;
+    padding-bottom: 30px;
+    a {
+        float: left;
+        margin-left: 15px;
+    }
+}

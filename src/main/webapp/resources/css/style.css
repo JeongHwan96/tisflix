@@ -1,0 +1,274 @@
+body {
+  background: #b9c9ca;
+}
+
+/* 슬라이드 구현 */
+
+#slideTogglebox {
+  width: 100%;
+  /* height: 200px; */
+  position: relative;
+  /* bottom: 390px; */
+  /* left: 664px; */
+  display: block;
+  margin: 0 auto;
+  background: rgba(229, 188, 188, 0);
+}
+
+/* 슬라이드 구현 끝 */
+
+
+
+#Toggle button {
+  width: auto;
+  -webkit-appearance: none;
+  outline: none;
+  display: inline-block;
+  margin: 12px 0;
+  padding: 16px 48px;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  background-color: #d6dfe0;
+  border: 6px solid #9cb3b4;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  border-radius: 12px;
+  position: absolute;
+  top: 660px;
+  right: 0;
+  bottom: 0;
+  left: 1470px;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+#Toggle button:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.05);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+#Toggle button:hover {
+  background-color: #e2e8e9;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 0 6px 0;
+}
+#Toggle button:active {
+  -webkit-transform: scale(0.96);
+  transform: scale(0.96);
+}
+#Toggle button.is-active {
+  background-color: #ffffff;
+  border: 12px double #7f9c9e;
+  -webkit-transform: scale(1.02);
+  transform: scale(1.02);
+  -webkit-animation: toggleHover 0.8s 1 0.01s ease-out;
+  animation: toggleHover 0.8s 1 0.01s ease-out;
+  border-radius: 18px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 12px 4px;
+}
+#Toggle button.is-active span {
+  background-color: #000000;
+}
+#Toggle button span.button_menu-lines, button span.button_menu-lines:before, button span.button_menu-lines:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 8px;
+  margin: auto;
+  background: #9cb3b4;
+  border-radius: 12px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-transform: translateZ(1);
+  transform: translateZ(1);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+#Toggle button span.button_menu-lines {
+  -webkit-animation: toggleSpinClose 0.8s 1 0.01s;
+  animation: toggleSpinClose 0.8s 1 0.01s;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+#Toggle button span.button_menu-lines:before {
+  -webkit-transform: translateY(-18px);
+  transform: translateY(-18px);
+}
+#Toggle button span.button_menu-lines:after {
+  -webkit-transform: translateY(18px);
+  transform: translateY(18px);
+}
+#Toggle button span.button_menu-text {
+  visibility: hidden;
+}
+#Toggle button:hover.button_menu-lines, button:hover.button_menu-lines:before, button:hover.button_menu-lines:after {
+  background-color: #7f9c9e;
+}
+#Toggle button.is-paused span.button_menu-lines {
+  -webkit-animation: toggleSpinClose 0s 1 0.01s;
+  animation: toggleSpinClose 0s 1 0.01s;
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+#Toggle button.is-active {
+  height: 112px;
+}
+#Toggle button.is-active span.button_menu-lines {
+  background-color: transparent;
+  -webkit-animation: toggleHover 0.8s 1 0.01s;
+  animation: toggleHover 0.8s 1 0.01s;
+  -webkit-animation: toggleSpinOpen 0.8s 1 0.5s;
+  animation: toggleSpinOpen 0.8s 1 0.5s;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -moz-transition: 0.2s 0.4s;
+  -o-transition: 0.2s 0.4s;
+  -webkit-transition: 0.2s;
+  -webkit-transition-delay: 0.4s;
+  -webkit-transition: 0.2s 0.4s;
+  transition: 0.2s 0.4s;
+}
+#Toggle button.is-active span.button_menu-lines:before, button.is-active span.button_menu-lines:after {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  background-color: #7f9c9e;
+  -moz-transition: 0.4s 0.4s;
+  -o-transition: 0.4s 0.4s;
+  -webkit-transition: 0.4s;
+  -webkit-transition-delay: 0.4s;
+  -webkit-transition: 0.4s 0.4s;
+  transition: 0.4s 0.4s;
+}
+#Toggle button.is-active span.button_menu-lines:before {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#Toggle button.is-active span.button_menu-lines:after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+@-webkit-keyframes toggleHover {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  5% {
+    -webkit-transform: scale(0.88);
+    transform: scale(0.88);
+  }
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  40% {
+    -webkit-transform: scale(0.92);
+    transform: scale(0.92);
+  }
+  55% {
+    -webkit-transform: scale(1.06);
+    transform: scale(1.06);
+  }
+  70% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+  }
+  85% {
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+  }
+  100% {
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+  }
+}
+@keyframes toggleHover {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  5% {
+    -webkit-transform: scale(0.88);
+    transform: scale(0.88);
+  }
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  40% {
+    -webkit-transform: scale(0.92);
+    transform: scale(0.92);
+  }
+  55% {
+    -webkit-transform: scale(1.06);
+    transform: scale(1.06);
+  }
+  70% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+  }
+  85% {
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+  }
+  100% {
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+  }
+}
+@-webkit-keyframes toggleSpinOpen {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes toggleSpinOpen {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes toggleSpinClose {
+  from {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+@keyframes toggleSpinClose {
+  from {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}

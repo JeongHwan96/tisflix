@@ -1,0 +1,137 @@
+@charset "UTF-8";
+* { margin: 0; padding: 0; -webkit-box-sizing: border-box; box-sizing: border-box; list-style-type: none; }
+
+.topmenu { background: #686767; }
+
+.topmenu .logo { width: 10%; position: relative; left: 90px; top: 22px; cursor: pointer; }
+
+.Detail { background: rgba(229, 188, 188, 0.6); }
+
+.img { position: relative; bottom: 0; left: 105px; width: 289px; height: 340px; }
+
+.img img { width: 290px; height: 340px; }
+
+.Total { position: relative; width: 50%; left: 400px; bottom: 351px; }
+
+.formBox { height: 440px; width: 100%; position: relative; top: 48px; border-bottom: 1px solid #c4bbbb; }
+
+.formBox .explanation { right: 20px; width: 55%; position: relative; }
+
+.formBox .titlesong { text-align: left; left: 50px; position: relative; color: black; }
+
+.explanation2 { left: 30px; width: 35%; font-size: 15px; position: relative; text-align: left; }
+
+.explanation2 .Detaildate, .explanation2 .Detailgenre, .explanation2 .slush, .explanation2 .company2 { position: relative; color: black; }
+
+.explanation3 { width: 60%; height: 20%; font-size: 13px; position: relative; bottom: 25px; }
+
+.explanation3 .albumname, .explanation3 .albumname2 { position: relative; color: black; }
+
+.explanation3 .albumname { font-weight: 700; text-align: left; left: 29px; top: 40px; font-size: 22px; }
+
+.explanation3 .albumname2 { font-size: 20px; height: 30%; top: 45px; left: 31px; text-align: left; }
+
+.explanation4 { width: 60%; height: 20%; font-size: 13px; position: relative; bottom: 30px; }
+
+.explanation4 .artist, .explanation4 .artist2 { position: relative; color: black; }
+
+.explanation4 .artist { font-weight: 700; text-align: left; left: 29px; top: 39px; font-size: 22px; }
+
+.artist2 { font-size: 20px; height: 30%; top: 39px; left: 32px; text-align: left; }
+
+.explanation6 { width: 60%; height: 20%; font-size: 13px; position: relative; bottom: 47px; }
+
+.explanation6 .Review, .explanation6 .Review2 { position: relative; color: black; }
+
+.explanation6 .Review { font-weight: 700; text-align: left; left: 29px; top: 31px; font-size: 22px; }
+
+.explanation6 .Review2 { width: 110%; text-align: left; font-size: 20px; height: 30%; top: 30px; left: 30px; }
+
+.explanation7 { width: 60%; height: 20%; font-size: 13px; position: relative; bottom: 20px; }
+
+.explanation7 .Recommendation, .explanation7 .Recommendation2 { position: relative; color: black; }
+
+.explanation7 .Recommendation { font-weight: 700; text-align: left; left: 28px; bottom: 0px; font-size: 22px; }
+
+.explanation7 .Recommendation2 { position: relative; width: 110%; text-align: left; font-size: 20px; height: 30%; bottom: 0px; left: 30px; }
+
+.explanation8 { width: 60%; height: 20%; font-size: 13px; position: relative; text-align: center; }
+
+.explanation8 .Video, .explanation8 .Video2, .explanation8 .VideoName { position: relative; color: black; }
+
+.explanation8 .Video { font-weight: 700; text-align: left; left: 32px; top: 0px; font-size: 22px; }
+
+.explanation8 .Video2 { position: relative; width: 46%; text-align: left; font-size: 20px; height: 170%; top: 13px; left: 30px; }
+
+.explanation8 .TotalVideo { position: relative; border-left: 1px solid #c4bbbb; left: 900px; bottom: 374px; }
+
+.explanation8 .TotalVideo .MV { position: relative; left: 30px; bottom: 30px; font-size: 20px; font-weight: 700; color: black; }
+
+.albumname, .artist, .Review, .Recommendation, .MV { font-family: 'Jua', sans-serif; }
+
+.albumname2, .artist2, .Review2, .Recommendation2 { font-size: 18px !important; }
+
+.btns { position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; width: 500px; left: 1390px; bottom: 50px; color: antiquewhite; }
+
+.Modify, .Delete, .Cancel { position: relative; cursor: pointer; font-weight: 700; font-size: 20px; left: 100px; }
+
+.Modify { left: 100px; }
+
+.Delete { left: 150px; }
+
+.Cancel { left: 200px; }
+
+/*hover*/
+.Modify:hover, .Delete:hover, .Cancel:hover { color: rgba(186, 143, 225, 0.8); }
+
+/* 댓글 입력 */
+.replyWrite { width: 90%; height: 100px; margin: 20px auto; }
+
+.replyWrite .sub1 { position: relative; top: 40px; float: left; width: 5%; }
+
+.replyWrite .sub2 { float: left; width: 73%; }
+
+.replyWrite .replyWriteBtn { position: relative; left: 38px; width: 7%; height: 50%; }
+
+/*글자 수*/
+#textLengthCheck { position: relative; width: 3%; bottom: 10px; left: 73px; }
+
+/* 댓글 */
+li { width: 100%; }
+
+li .reply { width: 90%; height: 40px; margin: 10px auto; }
+
+li .reply .replytest { position: relative; top: 4px; left: 20px; }
+
+li .reply .profileImg { width: 25px; height: 25px; -o-object-fit: cover; object-fit: cover; float: left; }
+
+li .reply .numbering { float: left; width: 5%; }
+
+li .reply .content { float: left; width: 55%; }
+
+li .reply .writer { float: left; width: 10%; }
+
+li .reply .regDate { float: left; width: 11%; }
+
+li .reply .replyUpdateBtn { float: right; width: 5%; }
+
+li .reply .replyDeleteBtn { float: right; margin: 0 25px; width: 5%; }
+
+.musicuparrow { display: none; position: fixed; bottom: 30px; right: 30px; z-index: 999; border: 1px solid #ccc; outline: none; background-color: white; color: #333; cursor: pointer; padding: 15px 20px; border-radius: 100%; -webkit-transition: all 0.5s ease; transition: all 0.5s ease; }
+
+.menu-fixed { display: block; }
+
+/* 페이지네이션 */
+.pagination { position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; padding-left: 0; margin: 0 auto; border-radius: 4px; width: 10%; padding-bottom: 30px; }
+
+.pagination a { float: left; margin-left: 15px; }
+
+/* footer */
+#footer { color: black; text-align: center; font-size: 20px; bottom: 0px; position: absolute; height: 100px; background: #686767; width: 100%; }
+
+#footer p { color: #b1a5c8; line-height: 100px; margin: 0; }
+
+html { position: relative; }
+
+/* replyMusicForm 폼*/
+.replyMusicForm { width: 100%; height: 400px; position: relative; top: -300px; }

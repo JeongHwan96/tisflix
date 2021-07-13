@@ -1,0 +1,64 @@
+#update {
+    width: 40%;
+    position: relative;
+    top: 260px;
+    left: 610px;
+    text-align: center;
+    .topmenu {
+        position: relative;
+        right: 610px;
+        width: 1920px;
+        height: 100px;
+        background: #686767;
+        bottom: 260px;
+        .logo {
+            width: 10%;
+            position: relative;
+            right: 758px;
+            top: 15px;
+            cursor: pointer;
+        }
+    }
+    h2, .h2 {
+        font-size: 30px;
+        position: relative;
+        bottom: 30px;
+    }
+    form {
+        position: relative;
+        text-align: left;
+    }
+    .table {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    th {
+        text-align: center;
+    }
+    input {
+        position: relative;
+        left: 70px;
+    }
+    .btns {
+        width: 50%;
+        position: relative;
+        left: 550px;
+    }
+}
+
+#footer {
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    top: 820px;
+    position: absolute;
+    height: 100px;
+    background: #686767;
+    width: 100%;
+    p {
+        color: #b1a5c8;
+        line-height: 100px;
+        margin: 0;
+    }
+}

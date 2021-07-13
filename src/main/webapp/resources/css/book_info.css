@@ -1,0 +1,156 @@
+@charset "UTF-8";
+* { margin: 0; padding: 0; -webkit-box-sizing: border-box; box-sizing: border-box; list-style-type: none; }
+
+.Detail { background: white; }
+
+.topmenu { background: #686767; }
+
+.topmenu .logo { cursor: pointer; width: 10%; position: relative; left: 90px; top: 22px; }
+
+.Total { position: relative; width: 50%; left: 510px; bottom: 515px; }
+
+.Total .explanation { font-size: 20px; font-weight: 700; right: 20px; width: 40%; position: relative; }
+
+.Total .title { text-align: left; left: 50px; position: relative; color: black; }
+
+.Total .explanation2 { left: 30px; top: 30px; width: 22%; position: relative; text-align: left; }
+
+.Total .explanation2 .write { font-size: 22px; font-weight: 700; font-family: 'Jua', sans-serif; }
+
+.Total .explanation2 .write2 { font-size: 20px; }
+
+.Total .explanation3 { width: 60%; height: 20%; font-size: 13px; position: relative; top: 5px; }
+
+.Total .publisher, .Total .publisher2 { position: relative; color: black; }
+
+.Total .publisher { font-weight: 700; text-align: left; left: 29px; top: 40px; font-size: 22px; font-family: 'Jua', sans-serif; }
+
+.Total .publisher2 { font-size: 20px; height: 30%; top: 45px; left: 31px; text-align: left; }
+
+.explanation4 { width: 60%; height: 20%; font-size: 13px; position: relative; bottom: 100px; }
+
+.explanation4 .Genre, .explanation4 .Genre2 { position: relative; color: black; }
+
+.explanation4 .Genre { font-weight: 700; text-align: left; left: 29px; top: 39px; font-size: 22px; font-family: 'Jua', sans-serif; }
+
+.Genre2 { font-size: 20px; height: 30%; top: 39px; left: 32px; text-align: left; }
+
+.explanation5 { width: 60%; height: 20%; font-size: 13px; position: relative; bottom: 204px; }
+
+.explanation5 .Review, .explanation5 .Review2 { position: relative; color: black; }
+
+.explanation5 .Review { font-weight: 700; text-align: left; left: 29px; top: 31px; font-size: 22px; font-family: 'Jua', sans-serif; }
+
+.explanation5 .Review2 { width: 85%; text-align: left; font-size: 20px; height: 30%; top: 30px; left: 30px; }
+
+.explanation6 { width: 60%; height: 10%; font-size: 13px; position: relative; bottom: 268px; }
+
+.explanation6 .Recommendation, .explanation6 .Recommendation2 { position: relative; color: black; }
+
+.explanation6 .Recommendation { font-weight: 700; text-align: left; left: 28px; bottom: 0px; font-size: 22px; font-family: 'Jua', sans-serif; }
+
+.explanation6 .Recommendation2 { position: relative; width: 110%; text-align: left; font-size: 20px; height: 20%; bottom: 0px; left: 30px; }
+
+.explanation7 { font-size: 22px; position: relative; right: 390px; bottom: 180px; width: 100%; }
+
+.contentsofbook { font-family: 'Jua', sans-serif; }
+
+.contentsofbook2 { position: relative; word-wrap: break-word; white-space: pre; width: 173%; font-size: 16px; overflow: hidden; height: 170px; -webkit-transition: all 0.25s ease; transition: all 0.25s ease; }
+
+.contentsofbook2.show { height: 320px; }
+
+.explanation8 { font-size: 22px; position: relative; right: 390px; bottom: 140px; width: 100%; }
+
+.category { font-family: 'Jua', sans-serif; }
+
+.category2 { position: relative; word-wrap: break-word; white-space: pre; width: 130%; font-size: 16px; overflow: hidden; height: 180px; -webkit-transition: all 0.25s ease; transition: all 0.25s ease; }
+
+.category2.show { height: 850px; }
+
+.underline { position: relative; bottom: 215px; right: 405px; width: 180%; height: 2px; background: #333; margin-top: 30px; }
+
+.underline2 { position: relative; bottom: 185px; right: 405px; width: 180%; height: 2px; background: #333; margin-top: 30px; }
+
+.underline3 { position: relative; bottom: 115px; right: 405px; width: 180%; height: 2px; background: #333; margin-top: 30px; }
+
+.img { position: relative; top: 90px; left: 105px; width: 400px; height: 600px; }
+
+.img img { width: 400px; height: 550px; }
+
+.btns { position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; width: 500px; left: 1390px; bottom: 50px; color: antiquewhite; }
+
+.Modify, .Delete, .Cancel { position: relative; cursor: pointer; font-weight: 700; font-size: 20px; left: 100px; }
+
+.Modify { left: 100px; }
+
+.Delete { left: 150px; }
+
+.Cancel { left: 200px; }
+
+#footer { position: relative; width: 70%; }
+
+/* more & hide*/
+.hidden1 { color: #6699cc; cursor: pointer; width: 50px; position: relative; right: 390px; bottom: 170px; }
+
+.hidden1 .close1 { position: relative; display: none; bottom: 0px; }
+
+.hidden2 { width: 50px; cursor: pointer; position: relative; right: 390px; bottom: 140px; color: #6699cc; }
+
+.hidden2 .close2 { position: relative; display: none; bottom: 0px; }
+
+.show { display: block !important; }
+
+.hide { display: none; }
+
+/*hover*/
+/* 댓글 입력 */
+.replyWrite { width: 90%; height: 100px; margin: 20px auto; }
+
+.replyWrite .sub1 { position: relative; top: 40px; float: left; width: 5%; }
+
+.replyWrite .sub2 { float: left; width: 73%; }
+
+.replyWrite .replyWriteBtn { position: relative; left: 38px; width: 7%; height: 50%; }
+
+/*글자 수*/
+#textLengthCheck { position: relative; width: 3%; bottom: 10px; left: 73px; }
+
+/* 댓글 */
+li { width: 100%; }
+
+li .reply { width: 90%; height: 40px; margin: 10px auto; }
+
+li .reply .replytest { position: relative; top: 4px; left: 20px; }
+
+li .reply .profileImg { width: 25px; height: 25px; -o-object-fit: cover; object-fit: cover; float: left; }
+
+li .reply .numbering { float: left; width: 5%; }
+
+li .reply .content { float: left; width: 55%; }
+
+li .reply .writer { float: left; width: 10%; }
+
+li .reply .regDate { float: left; width: 11%; }
+
+li .reply .replyUpdateBtn { float: right; width: 5%; }
+
+li .reply .replyDeleteBtn { float: right; margin: 0 25px; width: 5%; }
+
+.uparrow { display: none; position: fixed; bottom: 30px; right: 30px; z-index: 999; border: 1px solid #ccc; outline: none; background-color: white; color: #333; cursor: pointer; padding: 15px 20px; border-radius: 100%; -webkit-transition: all 0.5s ease; transition: all 0.5s ease; }
+
+.menu-fixed { display: block; }
+
+/* 페이지네이션 */
+.pagination { position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; padding-left: 0; margin: 0 auto; border-radius: 4px; width: 10%; padding-bottom: 30px; }
+
+.pagination a { float: left; margin-left: 15px; }
+
+/* footer */
+#footer { color: black; text-align: center; font-size: 20px; bottom: 0px; position: absolute; height: 100px; background: #686767; width: 100%; }
+
+#footer p { color: #b1a5c8; line-height: 100px; margin: 0; }
+
+html { position: relative; }
+
+/* replyBookForm 폼*/
+.replyBookForm { width: 100%; height: 400px; position: relative; bottom: 520px; }
